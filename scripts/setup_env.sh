@@ -1,6 +1,7 @@
 : '
     Setup environment for run configuration.
     Run 'source path/to/setup_env.sh' for persistant settings.
+
     Authors: Ludvík Petersen and Martin Ægidius, Technical University of Denmark 
 '
 #!/bin/bash

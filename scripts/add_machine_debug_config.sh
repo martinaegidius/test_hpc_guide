@@ -1,7 +1,11 @@
 : '
     Shell script for adding an interactive node to users launch.json to enable debugging on interactive HPC nodes. 
-    Usage: start a session on the specific interactive node and run the script. Enter the name of the machine.
+
+    Usage:
+        start a session on the specific interactive node and run the script. Enter the name of the machine.
+
     Note: the script strips comments, and assumes valid json files (no trailing "," before {}-blocks)
+
     Authors: Ludvík Petersen and Martin Ægidius, Technical University of Denmark 
 '
 #!/bin/bash 
@@ -15,7 +19,7 @@ echo "Appending to existing launch.json"
 grep -v '^\s*//' .vscode/launch.json > .vscode/launch_clean.json
 
 jq --arg ip "$IPAddr" --arg name "$MACHINENAME" '.configurations += [{
-    "name": ("Attach to " + $name + " debugger using shell script"),
+    "name": ("Attach to debugger - $name"),
     "type": "debugpy",
     "request": "attach",
     "connect": {
