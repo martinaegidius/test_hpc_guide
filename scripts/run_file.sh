@@ -1,12 +1,15 @@
-#!/bin/bash
 : '
-    Run inference on Dual-Octree model.
+    Run a target python script with debugging support interactively on the GPU with least resource use.
     
     Usage:
-        bash run_main.sh [FILEPATH] [--multi <num_gpus>] [--debug]
+        bash run_file.sh [FILEPATH] [--multi <num_gpus>] [--debug]
 
     Specifying FILEPATH as an argument overwrites FILEPATH defined in file.
+    --debug flag should be provided if you wish to attach a VSCode debug session over remote ssh. 
+
+    Authors: Ludvík Petersen and Martin Ægidius, Technical University of Denmark 
 '
+#!/bin/bash
 
 # ---- Personalized variables ---- #
 

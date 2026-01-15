@@ -1,8 +1,10 @@
+: '
+    Shell script for adding an interactive node to users launch.json to enable debugging on interactive HPC nodes. 
+    Usage: start a session on the specific interactive node and run the script. Enter the name of the machine.
+    Note: the script strips comments, and assumes valid json files (no trailing "," before {}-blocks)
+    Authors: Ludvík Petersen and Martin Ægidius, Technical University of Denmark 
+'
 #!/bin/bash 
-#shell script for adding an interactive node to user's launch.json to enable debugging on interactive HPC nodes. 
-#Usage: start a session on the specific interactive node and run the script. Enter the name of the machine. 
-#Note: the script strips comments, and assumes valid json files (no trailing "," before {}-blocks)
-#authors: Ludvik Petersen and Martin Ægidius, Technical University of Denmark 
 
 read -p "Enter interactive node name: " MACHINENAME
 echo "Fetching ip adress eth0..."
